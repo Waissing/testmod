@@ -27,7 +27,7 @@ public class ModBlocks {
 			new ExperienceDroppingBlock(QuiltBlockSettings.of(Material.STONE).strength(4.0f).requiresTool(),
 					UniformIntProvider.create(3, 7)), ModItemGroup.CITRINE);
 
-	private static Block registerBlock (String name, Block block, ItemGroup group) {
+	private static Block registerBlock(String name, Block block, ItemGroup group) {
 		registerBlockItem(name, block, group);
 		return Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, name), block);
 	}
