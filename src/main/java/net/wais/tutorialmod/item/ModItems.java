@@ -14,6 +14,8 @@ import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 public class ModItems {
 	public static final Item CITRINE = registerItem("citrine",
 			new Item(new QuiltItemSettings()));
+	public static final Item RAW_CITRINE = registerItem("raw_citrine",
+			new Item(new QuiltItemSettings()));
 
 
 
@@ -21,19 +23,15 @@ public class ModItems {
 		return Registry.register(Registries.ITEM, new Identifier(TutorialMod.MOD_ID, name), item);
 	}
 
-	public static void addItemsToItemGroup(){
-		addToItemGroup(ItemGroups.INGREDIENTS, CITRINE);
-
-	}
-
-	private static void addToItemGroup(ItemGroup group, Item item){
+	private static void addToItemGroup(ItemGroup group, Item item) {
 		ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.addItem(item));
 	}
 
 
+
 	public static void	registerModItems(){
 		TutorialMod.LOGGER.info("Register Mod Items for" + TutorialMod.MOD_ID);
-		addItemsToItemGroup();
+
 	}
 }
 

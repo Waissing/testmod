@@ -1,5 +1,8 @@
 package net.wais.tutorialmod;
 
+
+import net.wais.tutorialmod.block.ModBlocks;
+import net.wais.tutorialmod.item.ModItemGroup;
 import net.wais.tutorialmod.item.ModItems;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
@@ -12,7 +15,8 @@ public class TutorialMod implements ModInitializer {
 
 	@Override
 	public void onInitialize(ModContainer mod) {
-
+		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
+		ModItemGroup.registerItemGroups();
 	}
 }
